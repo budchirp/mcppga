@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 #include "std/types.hpp"
 
 namespace std {
@@ -9,4 +11,4 @@ public:
   static u32 length(string content);
 };
 
-} // namespace Std
+} // namespace std
