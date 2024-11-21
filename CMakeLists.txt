@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(mccpga VERSION 0.1.0 LANGUAGES CXX)
+project(mcppga VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -15,10 +15,7 @@ file(GLOB SOURCES "src/**/*.cpp")
 
 add_library(${PROJECT_NAME} ${HEADERS} ${SOURCES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   target_compile_definitions(${PROJECT_NAME} PRIVATE DEBUG_MODE=1)
