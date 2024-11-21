@@ -2,8 +2,6 @@
 
 namespace std {
 
-using string = const char *;
-
 using i8 = char;
 using i16 = short;
 using i32 = int;
