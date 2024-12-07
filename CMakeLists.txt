@@ -10,8 +10,8 @@ endif()
 
 add_compile_options(-Wall -Wextra -Wpedantic)
 
-file(GLOB HEADERS "include/**/*.hpp")
-file(GLOB SOURCES "src/**/*.cpp")
+file(GLOB_RECURSE HEADERS "include/*/*.hpp" "include/*.hpp")
+file(GLOB_RECURSE SOURCES "src/*/*.cpp" "src/*.cpp")
 
 add_library(${PROJECT_NAME} ${HEADERS} ${SOURCES})
 
