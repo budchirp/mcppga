@@ -10,14 +10,14 @@ endif()
 
 # add_compile_options(-Wall -Wextra -Wpedantic)
 
-file(GLOB_RECURSE HEADERS "include/*/*.hpp" "include/*.hpp")
-file(GLOB_RECURSE SOURCES "src/*/*.cpp" "src/*.cpp")
+# file(GLOB_RECURSE HEADERS "include/*/*.hpp" "include/*.hpp")
+# file(GLOB_RECURSE SOURCES "src/*/*.cpp" "src/*.cpp")
 
 # add_library(${PROJECT_NAME} ${HEADERS} ${SOURCES})
 add_library(${PROJECT_NAME} INTERFACE)
 
 target_include_directories(${PROJECT_NAME} INTERFACE include)
-
+#
 # if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 #   target_compile_definitions(${PROJECT_NAME} PRIVATE DEBUG_MODE=1)
 #   target_compile_options(${PROJECT_NAME} PRIVATE -Og -g3 -DDEBUG)
